@@ -12,7 +12,7 @@ function App() {
   const [intervalId, setIntervalId] = useState(0);
 
   let currentDate: Date = new Date();
-  const finalDate: Date = new Date("2023-09-25")
+  const finalDate: Date = new Date("2023-10-09T21:00:00")
   
   useEffect(() => {
     const initialTimeDifference = finalDate.getTime() - currentDate.getTime();
@@ -59,13 +59,13 @@ function App() {
   }, [timeDifference]);
   
   return (
-    <main className="flex flex-col items-center relative h-screen w-screen bg-top before:absolute before:w-full before:h-full before:bg-gradient-to-b before:from-almostblack before:via-verydarkblue before:to-darkblue">
-      <article className="flex flex-col relative mt-28 items-center">
+    <main className="relative flex flex-col items-center w-screen h-screen bg-top before:absolute before:w-full before:h-full before:bg-gradient-to-b before:from-almostblack before:via-verydarkblue before:to-darkblue">
+      <article className="relative flex flex-col items-center mt-28">
         <h1 className="uppercase text-white text-base tracking-[5px] mx-10 text-center mb-11 font-bold">We're launching soon</h1>
         <TimePanel days={days} hours={hours} minutes={minutes} seconds={seconds}></TimePanel>
       </article>
-      <div className="h-screen w-screen bg-no-repeat bg-stars bg-top absolute"></div>
-      <img className="absolute bottom-0 h-1/4 w-fill object-cover right-0 object-my-position md:w-full lg:h-auto " src="/pattern-hills.svg" alt="" />
+      <div className="absolute w-screen h-screen bg-top bg-no-repeat bg-stars"></div>
+      <img className="absolute bottom-0 right-0 object-cover h-1/4 w-fill object-my-position md:w-full lg:h-auto " src="/pattern-hills.svg" alt="" />
       <SocialMedia />
     </main>
   )
