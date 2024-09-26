@@ -12,7 +12,7 @@ function App() {
   const [intervalId, setIntervalId] = useState(0);
 
   let currentDate: Date = new Date();
-  const finalDate: Date = new Date("2023-10-09T21:00:00")
+  const finalDate: Date = new Date("2024-12-31T00:00:00")
   
   useEffect(() => {
     const initialTimeDifference = finalDate.getTime() - currentDate.getTime();
